@@ -1,0 +1,3 @@
+https://download.bls.gov/pub/time.series/ln/ln.data.1.AllData
+
+

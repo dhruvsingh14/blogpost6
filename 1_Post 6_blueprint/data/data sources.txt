@@ -1,0 +1,12 @@
+jolts:
+
+https://download.bls.gov/pub/time.series/jt/
+
+ces:
+
+https://download.bls.gov/pub/time.series/ce/ce.data.0.AllCESSeries
+
+
+cps:
+
+https://download.bls.gov/pub/time.series/ln/ln.data.1.AllData

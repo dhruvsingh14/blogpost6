@@ -1,0 +1,115 @@
+Microsoft Windows [Version 10.0.18363.959]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\dsingh>cd C:\Dhruv\Misc\Personal\writing\Blogging\2_posts\2_August\wk3_post6\2_Post 6_analysis
+
+C:\Dhruv\Misc\Personal\writing\Blogging\2_posts\2_August\wk3_post6\2_Post 6_analysis>py labor_data.py
+   year  period  ...         turnover         growth
+0  2000      12  ...  medium_turnover  medium_growth
+1  2000      12  ...  medium_turnover    high_growth
+2  2000      12  ...     low_turnover     low_growth
+3  2000      12  ...     low_turnover  medium_growth
+4  2000      12  ...     low_turnover     low_growth
+
+[5 rows x 11 columns]
+Trade, transportation, and utilities    235
+Professional and business services      235
+Leisure and hospitality                 235
+Education and health services           235
+Manufacturing                           235
+Construction                            235
+Information                             235
+Government                              235
+Total private                           235
+Financial activities                    235
+Mining and logging                      235
+Retail trade                            235
+Other services                          235
+Name: industry_text, dtype: int64
+   year  period  ...         growth  first_half
+1  2000      12  ...    high_growth           0
+2  2000      12  ...     low_growth           0
+3  2000      12  ...  medium_growth           0
+4  2000      12  ...     low_growth           0
+5  2000      12  ...  medium_growth           0
+
+[5 rows x 12 columns]
+industry_text                         turnover
+Construction                          medium_turnover    0.707792
+                                      low_turnover       0.188312
+                                      high_turnover      0.103896
+Education and health services         medium_turnover    0.685106
+                                      high_turnover      0.314894
+Financial activities                  low_turnover       0.991489
+                                      medium_turnover    0.008511
+Government                            low_turnover       1.000000
+Information                           low_turnover       1.000000
+Leisure and hospitality               high_turnover      1.000000
+Manufacturing                         low_turnover       0.565714
+                                      medium_turnover    0.348571
+                                      high_turnover      0.085714
+Mining and logging                    low_turnover       1.000000
+Other services                        low_turnover       0.991489
+                                      medium_turnover    0.008511
+Professional and business services    high_turnover      1.000000
+Retail trade                          high_turnover      0.974359
+                                      medium_turnover    0.025641
+Total private                         high_turnover      1.000000
+Trade, transportation, and utilities  high_turnover      1.000000
+Name: turnover, dtype: float64
+   year  period  industry_text  ...         turnover         growth  first_half
+1  2000      12              3  ...  medium_turnover    high_growth           0
+2  2000      12             11  ...     low_turnover     low_growth           0
+3  2000      12              7  ...     low_turnover  medium_growth           0
+4  2000      12             12  ...     low_turnover     low_growth           0
+5  2000      12             10  ...    high_turnover  medium_growth           0
+
+[5 rows x 12 columns]
+Train set: (2315, 7) (2315,)
+Test set: (579, 7) (579,)
+Train set Accuracy:  0.9606911447084233
+Test set Accuracy:  0.9430051813471503
+The best accuracy was with 0.9516407599309153 with k= 3
+DecisionTree's Accuracy:  0.9470655926352128
+                 precision    recall  f1-score   support
+
+  high_turnover       0.99      0.93      0.96       256
+   low_turnover       0.98      0.96      0.97       255
+medium_turnover       0.75      0.97      0.85        68
+
+       accuracy                           0.95       579
+      macro avg       0.91      0.95      0.92       579
+   weighted avg       0.96      0.95      0.95       579
+
+Confusion matrix, without normalization
+[[244   1]
+ [  5 239]]
+0.9501936078501407
+C:\Users\dsingh\AppData\Local\Programs\Python\Python36\lib\site-packages\sklearn\metrics\_classification.py:664: FutureWarning: jaccard_similarity_score has been deprecated and replaced with jaccard_score. It will be removed in version 0.23. This implementation has surprising behavior for binary and multiclass classification tasks.
+  FutureWarning)
+0.9481865284974094
+C:\Users\dsingh\AppData\Local\Programs\Python\Python36\lib\site-packages\sklearn\metrics\_classification.py:664: FutureWarning: jaccard_similarity_score has been deprecated and replaced with jaccard_score. It will be removed in version 0.23. This implementation has surprising behavior for binary and multiclass classification tasks.
+  FutureWarning)
+0.8411053540587219
+Confusion matrix, without normalization
+[[232  24]
+ [  0 255]]
+C:\Users\dsingh\AppData\Local\Programs\Python\Python36\lib\site-packages\sklearn\metrics\_classification.py:1272: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+0.5157038490271316
+
+model 1
+0.9403299277367212
+0.9412780656303973
+model 2
+0.9454262021895817
+0.9470655926352128
+model 3
+0.9501936078501407
+0.9481865284974094
+model 4
+0.788354647533618
+0.8411053540587219
+0.5157038490271316
+
+C:\Dhruv\Misc\Personal\writing\Blogging\2_posts\2_August\wk3_post6\2_Post 6_analysis>
